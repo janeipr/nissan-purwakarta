@@ -37,6 +37,11 @@ export async function generateMetadata(
           width: img.width,
           height: img.height,
         },
+        {
+          url: process.env.NEXT_PUBLIC_BASEURL + img.src,
+          width: img.width / 2,
+          height: img.height / 2,
+        },
         ...previousImages,
       ],
     },
