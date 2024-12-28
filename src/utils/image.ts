@@ -1,18 +1,12 @@
-import fs from "node:fs/promises";
 import { getPlaiceholder } from "plaiceholder";
 
 export const getImage = async (src: string, isRemote: boolean = false) => {
   let buffer: Buffer<ArrayBufferLike>;
+  const finalPath = (!isRemote ? process.env.NEXT_PUBLIC_BASEURL : "") + src;
 
-  if (isRemote) {
-    buffer = await fetch(src).then(async (res) =>
-      Buffer.from(await res.arrayBuffer())
-    );
-  } else {
-    const finalPath = `/public${src.replace("/public", "")}`;
-
-    buffer = await fs.readFile(`${process.cwd()}${finalPath}`);
-  }
+  buffer = await fetch(finalPath).then(async (res) =>
+    Buffer.from(await res.arrayBuffer())
+  );
 
   const {
     metadata: { height, width },
