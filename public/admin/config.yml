@@ -9,7 +9,7 @@ local_backend:
 media_folder: /public/images/upload
 public_folder: /public
 publish_mode: editorial_workflow
-site_url: http://localhost:3000
+site_url: https://nissan-purwakarta.netlify.app
 logo_url: /public/images/logos/nissan/logo_Indomobil_Group.svg
 
 i18n:

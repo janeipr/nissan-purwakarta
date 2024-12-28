@@ -1,12 +1,12 @@
 {
   "type": "website",
-  "url": "http://localhost:3000",
+  "url": "https://nissan-purwakarta.netlify.app",
   "title": "Nissan Purwakarta",
   "description": "Nissan Purwakarta",
   "siteName": "Nissan Purwakarta",
   "images": [
     {
-      "url": "http://localhost:3000/images/logos/nissan/logo_Indomobil_Group.svg"
+      "url": "https://nissan-purwakarta.netlify.app/images/logos/nissan/logo_Indomobil_Group.svg"
     }
   ]
 }
