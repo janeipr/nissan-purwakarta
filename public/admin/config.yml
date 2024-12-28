@@ -9,7 +9,7 @@ local_backend:
 media_folder: /public/images/upload
 public_folder: /public
 publish_mode: editorial_workflow
-site_url: https://nissan-purwakarta.com
+site_url: http://localhost:3000
 logo_url: /public/images/logos/nissan/logo_Indomobil_Group.svg
 
 i18n:
@@ -56,6 +56,44 @@ collections:
                 widget: string
                 required: true
                 hint: "Jumlah experience/pengalaman yang akan ditampilkan di bagian statistik"
+
+          - label: Testimonies
+            name: testimonies
+            widget: list
+            fields:
+              - label: Logo
+                name: logo
+                widget: image
+                required: true
+                media_folder: "/public/images/upload"
+              - label: "Testimony"
+                name: testimony
+                widget: markdown
+                required: true
+              - label: "User"
+                name: user
+                widget: object
+                required: true
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                    required: true
+                  - label: Role
+                    name: role
+                    widget: string
+                    required: true
+                  - label: Picture
+                    name: picture
+                    widget: image
+                    media_folder: "/public/images/upload"
+                    required: true
+              - label: "Star"
+                name: star
+                widget: number
+                required: true
+                min: 0
+                max: 5
 
   - label: "Pages"
     name: "pages"
@@ -111,24 +149,81 @@ collections:
             collection: promo
             max: 3
             search_fields: ["title"]
-            value_field: "{{slug}}"
+            value_field: "{{fields.slug}}"
             display_fields: ["title"]
 
   - label: "Promo"
     name: "promo"
     folder: "src/contents/promo"
     extension: json
-    slug: "{{second}}_{{slug}}"
+    slug: "{{fields.slug}}"
     create: true
     editor:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+          hint: "Huruf kecil dari Title dan ganti spasi menjadi dash (-)",
+        }
       - { label: "Publish Date", name: "publishDate", widget: "datetime" }
-      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - {
+          label: "Thumbnail",
+          name: "thumbnail",
+          widget: "image",
+          media_folder: "/public/images/upload",
+        }
       - label: "Icon"
         name: "icon"
         widget: "object"
         fields:
           - { label: "Image", name: "src", widget: "image" }
-          - { label: "Background Color", name: "color", widget: "color" }
+          - {
+              label: "Background Color",
+              name: "color",
+              widget: "color",
+              media_folder: "/public/images/upload",
+            }
+
+  - label: "Service"
+    name: "service"
+    folder: "src/contents/service"
+    extension: json
+    slug: "{{fields.slug}}"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+          hint: "Huruf kecil dari Title dan ganti spasi menjadi dash (-)",
+        }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Publish Date", name: "publishDate", widget: "datetime" }
+      - {
+          label: "Thumbnail",
+          name: "thumbnail",
+          widget: "image",
+          media_folder: "/public/images/upload",
+        }
+      - label: "Screenshots"
+        name: "screenshots"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              media_folder: "/public/images/upload",
+            }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"

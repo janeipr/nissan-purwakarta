@@ -9,11 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fancyapps/ui": "^5.0.36",
     "@plaiceholder/next": "^3.0.0",
+    "@types/react-scroll": "^1.8.10",
+    "markdown-to-jsx": "^7.7.2",
     "next": "15.1.3",
     "plaiceholder": "^3.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-scroll": "^1.9.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

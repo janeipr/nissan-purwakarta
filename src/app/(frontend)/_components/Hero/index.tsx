@@ -1,7 +1,6 @@
 import Image from "next/image";
-import HeroImage from "^/public/images/hero-image.png";
-import HeroBg from "^/public/images/Ellipse.svg";
 import HomeContents from "@/contents/home.json";
+import { HeroBg, HeroImage } from "@/app/components/Icons";
 
 export default function Hero() {
   return (

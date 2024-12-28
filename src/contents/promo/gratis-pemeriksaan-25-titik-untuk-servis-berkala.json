@@ -1,9 +1,10 @@
 {
   "title": "Gratis Pemeriksaan 25 Titik untuk Servis Berkala!",
+  "slug": "gratis-pemeriksaan-25-titik-untuk-servis-berkala",
   "publishDate": "2024-12-27T23:57:00.000Z",
-  "thumbnail": "/public/services1.webp",
+  "thumbnail": "/images/upload/services1.webp",
   "icon": {
-    "src": "/public/crown.svg",
+    "src": "/images/upload/crown.svg",
     "color": "#4920e5"
   }
 }

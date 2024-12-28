@@ -8,7 +8,7 @@ export default function Workflow() {
       className="container max-w-[1130px] mx-auto pt-[100px] pb-[200px] relative"
     >
       <div className="flex flex-col gap-[50px] justify-center">
-        <h2 className="font-extrabold text-[50px] leading-[70px] text-center">
+        <h2 className="font-extrabold text-[50px] leading-[70px] text-center lg:w-4/5 mx-auto">
           Langkah Mudah Perawatan Kendaraan Anda
         </h2>
         <div className="flex justify-between items-start">

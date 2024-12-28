@@ -1,10 +1,5 @@
-import Navbar from "../components/Navbar";
-import { Hero, Slider, Statistic } from "./_components";
-import FAQ from "./_components/FAQ";
-import Promos from "./_components/Promos";
-import Services from "./_components/Services";
-import Testimonials from "./_components/Testimonials";
-import Workflow from "./_components/Workflow";
+import { Services, FAQ, Navbar, Testimonials } from "../components";
+import { Hero, Promos, Slider, Statistic, Workflow } from "./_components";
 
 export default function Home() {
   return (

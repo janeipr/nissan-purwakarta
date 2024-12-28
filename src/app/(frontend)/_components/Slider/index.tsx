@@ -47,6 +47,15 @@ export default function Slider() {
               />
             </div>
           ))}
+          {images.map((image, i) => (
+            <div key={i} className="flex w-fit h-[40px] shrink-0">
+              <BlurImage
+                src={image.src}
+                className="w-full grayscale aspect-square h-full object-contain"
+                alt="logo"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </div>

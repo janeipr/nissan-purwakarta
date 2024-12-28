@@ -1,8 +1,7 @@
 import BlurImage from "../BlurImage";
-import CallIcon from "^/public/images/icons/call.svg";
-import DribbleIcon from "^/public/images/icons/dribbble.svg";
-import SMSIcon from "^/public/images/icons/sms.svg";
 import Image from "next/image";
+import { CallIcon, DribbleIcon, SMSIcon } from "../Icons";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -23,54 +22,54 @@ export default function Footer() {
         <div className="flex gap-[100px] z-10">
           <div className="flex flex-col gap-5">
             <p className="font-bold text-lg">Explore</p>
-            <a
-              href=""
+            <Link
+              href="/#promos"
               className="font-medium hover:font-semibold hover:text-portto-light-gold transition-all duration-300"
             >
               Promo
-            </a>
-            <a
-              href=""
+            </Link>
+            <Link
+              href="/#services"
               className="font-medium hover:font-semibold hover:text-portto-light-gold transition-all duration-300"
             >
               Service
-            </a>
-            <a
-              href=""
+            </Link>
+            <Link
+              href="/#testimonials"
               className="font-medium hover:font-semibold hover:text-portto-light-gold transition-all duration-300"
             >
               Testimonials
-            </a>
-            <a
-              href=""
+            </Link>
+            <Link
+              href="/#about"
               className="font-medium hover:font-semibold hover:text-portto-light-gold transition-all duration-300"
             >
               About
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col gap-5">
             <p className="font-bold text-lg">Connect</p>
-            <a
-              href=""
+            <Link
+              href="tel:"
               className="font-medium hover:font-semibold hover:text-portto-light-gold transition-all duration-300 flex items-center gap-[6px]"
             >
               <Image src={CallIcon} alt="icon" />
               +1 2208 1996
-            </a>
-            <a
-              href=""
+            </Link>
+            <Link
+              href="#"
               className="font-medium hover:font-semibold hover:text-portto-light-gold transition-all duration-300 flex items-center gap-[6px]"
             >
               <Image src={DribbleIcon} alt="icon" />
               indomobil
-            </a>
-            <a
-              href=""
+            </Link>
+            <Link
+              href="mailto:"
               className="font-medium hover:font-semibold hover:text-portto-light-gold transition-all duration-300 flex items-center gap-[6px]"
             >
               <Image src={SMSIcon} alt="icon" />
               team@indomobil.com
-            </a>
+            </Link>
           </div>
         </div>
       </div>

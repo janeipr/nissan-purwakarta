@@ -2,9 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
-
-import MessageIcon from "^/public/images/icons/messages.svg";
-import ArrowIcon from "^/public/images/icons/arrow-circle-down.svg";
+import { MessageIcon, ArrowIcon } from "../Icons";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -32,7 +31,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="FAQ" className="container max-w-[1130px] mx-auto">
+    <section id="faq" className="container max-w-[1130px] mx-auto">
       <div className="flex gap-[70px] items-center pt-[100px] pb-[150px]">
         <div className="flex flex-col gap-[30px]">
           <div className="w-20 h-20 flex shrink-0 rounded-full bg-portto-purple items-center justify-center">
@@ -46,12 +45,12 @@ export default function FAQ() {
               If you have any question please contact me.
             </p>
           </div>
-          <a
-            href=""
+          <Link
+            href="/"
             className="bg-portto-black font-bold text-lg text-white rounded-full p-[14px_30px] w-fit transition-all duration-300 hover:bg-white hover:text-portto-black hover:ring hover:ring-portto-black"
           >
             Contact Me
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col gap-[30px] w-[603px] shrink-0">
           {faqs.map((faq, i) => (
