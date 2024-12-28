@@ -16,14 +16,16 @@ export const metadata: Metadata = {
     template: "Nissan Purwakarta | %s",
     default: "Nissan Purwakarta",
   },
-  icons: "/images/logos/nissan/logo_Indomobil_Group.svg",
-  manifest: "/manifest.json",
+  icons:
+    process.env.NEXT_PUBLIC_BASEURL +
+    "/images/logos/nissan/logo_Indomobil_Group.svg",
+  manifest: process.env.NEXT_PUBLIC_BASEURL + "/manifest.json",
   description: "Nissan purwakarta",
   openGraph: {
-    url: "https://nissan-purwakarta.netlify.app",
+    url: process.env.NEXT_PUBLIC_BASEURL,
     images: [
       {
-        url: "/images/og-image.png",
+        url: process.env.NEXT_PUBLIC_BASEURL + "/images/og-image.png",
         width: 1147,
         height: 991,
       },
