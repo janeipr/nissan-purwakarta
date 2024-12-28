@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
   description: "Nissan purwakarta",
   openGraph: {
+    url: "https://nissan-purwakarta.netlify.app",
     images: [
       {
         url: "/images/og-image.png",
