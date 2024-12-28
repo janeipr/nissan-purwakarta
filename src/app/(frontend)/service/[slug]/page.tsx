@@ -32,7 +32,11 @@ export async function generateMetadata(
     title: contentDetail.title,
     openGraph: {
       images: [
-        { url: img.src, width: img.width, height: img.height },
+        {
+          url: process.env.NEXT_PUBLIC_BASEURL + img.src,
+          width: img.width,
+          height: img.height,
+        },
         ...previousImages,
       ],
     },
