@@ -9,6 +9,7 @@ import CallIcon from "^/public/images/icons/call.svg";
 import DribbleIcon from "^/public/images/icons/dribbble.svg";
 import SMSIcon from "^/public/images/icons/sms.svg";
 import QuoteIcon from "^/public/images/icons/quote.svg";
+import Logo from "^/public/images/logos/nissan/logo_Indomobil_Group.svg";
 
 export {
   StarIcon,
@@ -22,4 +23,5 @@ export {
   DribbleIcon,
   SMSIcon,
   QuoteIcon,
+  Logo,
 };

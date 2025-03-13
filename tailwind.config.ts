@@ -8,6 +8,14 @@ export default {
   ],
   theme: {
     extend: {
+      container: {
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          md: "1rem",
+          xl: "0",
+        },
+      },
       backgroundImage: {
         background1: "url('/images/background/background1.png')",
       },

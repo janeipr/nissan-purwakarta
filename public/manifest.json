@@ -6,7 +6,6 @@
   "siteName": "Nissan Purwakarta",
   "name": "Nissan Purwakarta",
   "short_name": "NP",
-  "display": "standalone",
   "images": [
     {
       "url": "https://nissan-purwakarta.netlify.app/images/logos/nissan/logo_Indomobil_Group.svg"

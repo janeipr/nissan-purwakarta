@@ -30,10 +30,10 @@ export default async function Services() {
       className="w-full flex flex-col py-[100px] bg-background1 bg-cover bg-center bg-no-repeat"
     >
       <div className="flex flex-col gap-[10px] mb-[50px]">
-        <h2 className="font-extrabold text-[50px] leading-[70px] text-center text-white">
+        <h2 className="font-extrabold text-3xl lg:text-[50px] lg:leading-[70px] text-center text-white">
           Rawat Mobil, Hindari Masalah!
         </h2>
-        <p className="text-lg text-center text-white">
+        <p className="text-[16px] lg:text-lg text-center text-white">
           Ketahui jadwal perawatan komponen penting.
         </p>
       </div>

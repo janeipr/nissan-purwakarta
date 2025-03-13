@@ -20,6 +20,12 @@
   }
 } */
 
+html,
+body {
+  width: 100% !important;
+  overflow-x: hidden !important;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

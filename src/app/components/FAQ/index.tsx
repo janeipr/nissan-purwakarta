@@ -32,7 +32,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" className="container max-w-[1130px] mx-auto">
-      <div className="flex gap-[70px] items-center pt-[100px] pb-[150px]">
+      <div className="flex flex-col lg:flex-row gap-[70px] items-center pt-[100px] pb-[150px]">
         <div className="flex flex-col gap-[30px]">
           <div className="w-20 h-20 flex shrink-0 rounded-full bg-portto-purple items-center justify-center">
             <Image src={MessageIcon} alt="icon" />
@@ -52,7 +52,7 @@ export default function FAQ() {
             Contact Me
           </Link>
         </div>
-        <div className="flex flex-col gap-[30px] w-[603px] shrink-0">
+        <div className="flex flex-col gap-[30px] w-full  shrink-0">
           {faqs.map((faq, i) => (
             <div
               key={i}

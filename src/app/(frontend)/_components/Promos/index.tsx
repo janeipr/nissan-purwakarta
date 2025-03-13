@@ -17,23 +17,23 @@ export default async function Promos() {
       >
         <div className="flex flex-col gap-[50px]">
           <div className="flex justify-between items-center">
-            <h2 className="font-extrabold text-[50px] leading-[70px]">
-              Promo and Penawaran Khusus
+            <h2 className="font-extrabold text-3xl lg:text-[50px] lg:leading-[70px]">
+              Promo dan Penawaran Khusus
             </h2>
             <Link
               href="#promo"
-              className="font-bold text-lg bg-portto-black rounded-full w-fit h-fit p-[14px_30px] text-white transition-all duration-300 hover:bg-white hover:text-portto-black hover:ring hover:ring-portto-black"
+              className="font-bold text-center text-sm whitespace-nowrap lg:whitespace-normal lg:text-lg bg-portto-black rounded-full w-fit h-fit p-[14px_30px] text-white transition-all duration-300 hover:bg-white hover:text-portto-black hover:ring hover:ring-portto-black"
             >
               Semua Promo
             </Link>
           </div>
-          <div className="grid grid-cols-2 gap-[30px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-[30px]">
             {contents.map((p, i) => (
               <div
                 key={i}
                 className={`${
-                  i === contents.length - 1 ? "col-span-2" : ""
-                } p-[50px] pb-0 rounded-[30px] flex flex-col gap-[50px] bg-[#F4F5F8]`}
+                  i === contents.length - 1 ? "lg:col-span-2" : ""
+                } p-5 md:p-7 lg:p-[50px] pb-0 rounded-[30px] flex flex-col gap-[50px] bg-[#F4F5F8]`}
               >
                 <div
                   style={{ backgroundColor: p.icon.color }}
@@ -46,15 +46,15 @@ export default async function Promos() {
                   />
                 </div>
                 <div className="flex flex-col gap-5">
-                  <p className="font-extrabold text-[32px] leading-[48px]">
+                  <p className="font-bold lg:font-extrabold text-xl md:text-2xl lg:text-[32px] lg:leading-[48px]">
                     {p.title}
                   </p>
                 </div>
                 <div
                   className={
                     i === contents.length - 1
-                      ? "w-[450px] h-[350px] flex shrink-0"
-                      : "w-full h-[350px]"
+                      ? "lg:w-[450px] lg:h-[350px] w-full h-auto flex shrink-0"
+                      : "w-full lg:h-[350px] h-auto"
                   }
                 >
                   <BlurImage

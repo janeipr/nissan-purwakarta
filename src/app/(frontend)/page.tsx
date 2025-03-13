@@ -4,10 +4,7 @@ import { Hero, Promos, Slider, Statistic, Workflow } from "./_components";
 export default function Home() {
   return (
     <>
-      <section
-        id="Header"
-        className="flex flex-col gap-[100px] bg-portto-black relative"
-      >
+      <section id="Header" className=" bg-portto-black relative">
         <Navbar />
 
         <Hero />
@@ -17,9 +14,9 @@ export default function Home() {
 
       <Promos />
       <Services />
-      <Workflow />
-      <Testimonials />
-      <FAQ />
+      {/* <Workflow /> */}
+      {/* <Testimonials /> */}
+      {/* <FAQ /> */}
     </>
   );
 }

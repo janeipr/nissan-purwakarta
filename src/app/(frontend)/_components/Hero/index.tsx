@@ -1,24 +1,31 @@
+"use client";
+
 import Image from "next/image";
 import HomeContents from "@/contents/home.json";
 import { HeroBg, HeroImage } from "@/app/components/Icons";
+import { redirectToWA } from "@/utils/helpers";
 
 export default function Hero() {
   return (
-    <div className="hero container max-w-[1130px] mx-auto flex justify-between items-center relative">
+    <div className="hero container max-w-[1130px] mx-auto flex flex-col lg:flex-row justify-between items-center relative">
       <div className="flex flex-col gap-[50px] h-fit w-fit text-white z-10">
-        <h1 className="font-extrabold text-4xl">{HomeContents.hero.title}</h1>
-        <div className="font-light text-lg">
-          <span className="font-bold text-2xl">
+        <h1 className="font-extrabold text-center lg:text-left text-3xl xl:text-4xl">
+          {HomeContents.hero.title}
+        </h1>
+        <div className="font-light text-center lg:text-left text-md">
+          <p className="font-bold mb-3 text-xl xl:text-2xl">
             {HomeContents.hero.subtitle}
-          </span>
-          <br />
+          </p>
           {HomeContents.hero.description}
         </div>
-        <button className="font-bold text-[26px] leading-[39px] rounded-[30px] p-[30px_40px] bg-portto-purple w-fit transition-all duration-300 hover:shadow-[0_10px_20px_0_#4920E5]">
+        <button
+          onClick={() => redirectToWA()}
+          className="font-bold mx-auto lg:mx-0 text-[20px] lg:text-[26px] leading-[39px] rounded-[30px] p-[20px_30px] bg-portto-purple w-fit transition-all duration-300 hover:shadow-[0_10px_20px_0_#4920E5]"
+        >
           {HomeContents.hero.button.label}
         </button>
       </div>
-      <div className="flex max-w-[471px] max-h-[567px] z-10">
+      <div className="flex mt-5 lg:mt-0 max-w-[471px] max-h-[567px] z-10">
         <Image
           placeholder="blur"
           src={HeroImage}

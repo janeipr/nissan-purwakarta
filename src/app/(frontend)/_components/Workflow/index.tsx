@@ -11,7 +11,7 @@ export default function Workflow() {
         <h2 className="font-extrabold text-[50px] leading-[70px] text-center lg:w-4/5 mx-auto">
           Langkah Mudah Perawatan Kendaraan Anda
         </h2>
-        <div className="flex justify-between items-start">
+        <div className="flex flex-col lg:flex-row justify-between items-start">
           <div className="w-[350px] flex flex-col shrink-0 gap-[30px] items-center">
             <div className="flex-none">
               <BlurImage src="/images/icons/messages-notif.svg" alt="icon" />
