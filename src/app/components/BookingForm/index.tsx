@@ -43,7 +43,7 @@ Catatan Tambahan: ${formData.notes}`;
 
   const isWeekday = (date: string) => {
     const day = new Date(date).getDay();
-    return day !== 0 && day !== 6;
+      return day !== 0 && day !== 6;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -55,6 +55,22 @@ Catatan Tambahan: ${formData.notes}`;
         setFormData((prev) => ({
           ...prev,
           [name]: value,
+        }));
+      }
+      return;
+    }
+
+    if (name === 'time') {
+      // Only update if value is between 08:00 and 17:00
+      if (parseInt(value) >= 8 && parseInt(value) <= 17) {
+        setFormData((prev) => ({
+          ...prev,
+          [name]: value,
+        }));
+      }else{
+        setFormData((prev) => ({
+          ...prev,
+          [name]: "",
         }));
       }
       return;
@@ -90,13 +106,14 @@ Catatan Tambahan: ${formData.notes}`;
         
         <h2 className="text-2xl font-bold mb-6">Booking Service Appointment</h2>
         
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6" data-testid="booking-form">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="name">
                 Nama Lengkap*
               </label>
               <input
+              id="name"
                 type="text"
                 name="name"
                 required
@@ -107,10 +124,11 @@ Catatan Tambahan: ${formData.notes}`;
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="phone">
                 No. Telepon*
               </label>
               <input
+              id="phone"
                 type="tel"
                 name="phone"
                 required
@@ -122,10 +140,11 @@ Catatan Tambahan: ${formData.notes}`;
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="address">
               Alamat*
             </label>
             <input
+              id="address"
               type="text"
               name="address"
               required
@@ -137,10 +156,11 @@ Catatan Tambahan: ${formData.notes}`;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="date">
                 Tanggal Service* (Senin-Jumat)
               </label>
               <input
+                id="date"
                 type="date"
                 name="date"
                 required
@@ -153,10 +173,11 @@ Catatan Tambahan: ${formData.notes}`;
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Jam Service*
+              <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="time">
+                Jam Service* (08:00 - 17:00)
               </label>
               <input
+                id="time"
                 type="time"
                 name="time"
                 required
@@ -164,7 +185,6 @@ Catatan Tambahan: ${formData.notes}`;
                 onChange={handleChange}
                 min="08:00"
                 max="17:00"
-                step="1800"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-portto-light-gold focus:border-transparent [&::-webkit-calendar-picker-indicator]:appearance-none [&::-webkit-time-picker-indicator]:appearance-none"
               />
             </div>
@@ -172,10 +192,11 @@ Catatan Tambahan: ${formData.notes}`;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="vehicleModel">
                 Model Kendaraan*
               </label>
               <select
+                id="vehicleModel"
                 name="vehicleModel"
                 required
                 value={formData.vehicleModel}
@@ -193,10 +214,11 @@ Catatan Tambahan: ${formData.notes}`;
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
+              <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="serviceType">
                 Jenis Service*
               </label>
               <select
+                id="serviceType"
                 name="serviceType"
                 required
                 value={formData.serviceType}
@@ -215,10 +237,11 @@ Catatan Tambahan: ${formData.notes}`;
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 mb-2" htmlFor="notes">
               Catatan Tambahan
             </label>
             <textarea
+              id="notes"
               name="notes"
               value={formData.notes}
               onChange={handleChange}
