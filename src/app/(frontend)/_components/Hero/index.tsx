@@ -3,9 +3,11 @@
 import Image from "next/image";
 import HomeContents from "@/contents/home.json";
 import { HeroBg, HeroImage } from "@/app/components/Icons";
-import { redirectToWA } from "@/utils/helpers";
+import { useBookingForm } from "@/app/context/BookingFormContext";
 
 export default function Hero() {
+  const { openForm } = useBookingForm();
+
   return (
     <div className="hero container max-w-[1130px] mx-auto flex flex-col lg:flex-row justify-between items-center relative">
       <div className="flex flex-col gap-[50px] h-fit w-fit text-white z-10">
@@ -19,7 +21,7 @@ export default function Hero() {
           {HomeContents.hero.description}
         </div>
         <button
-          onClick={() => redirectToWA()}
+          onClick={openForm}
           className="font-bold mx-auto lg:mx-0 text-[20px] lg:text-[26px] leading-[39px] rounded-[30px] p-[20px_30px] bg-portto-purple w-fit transition-all duration-300 hover:shadow-[0_10px_20px_0_#4920E5]"
         >
           {HomeContents.hero.button.label}
