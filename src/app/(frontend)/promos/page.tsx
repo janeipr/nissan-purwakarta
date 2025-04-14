@@ -3,6 +3,8 @@ import { Navbar } from "@/app/components";
 import getContent from "@/service/contents";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
+import { Suspense } from "react";
+import Loading from "@/app/components/Loading";
 
 interface Promo {
   title: string;
@@ -38,6 +40,7 @@ export default async function PromosPage() {
         </section>
       </section>
 
+      <Suspense fallback={<div className="py-20"><Loading/></div>}>
       <section className="container max-w-[1130px] mx-auto py-[100px]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {contents.map((p, i) => (
@@ -75,6 +78,7 @@ export default async function PromosPage() {
           ))}
         </div>
       </section>
+      </Suspense>
     </>
   );
 } 

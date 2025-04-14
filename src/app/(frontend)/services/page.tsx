@@ -4,6 +4,8 @@ import getContent from "@/service/contents";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { imageFromCMS } from "@/utils/helpers";
+import { Suspense } from "react";
+import Loading from "@/app/components/Loading";
 
 interface Service {
   slug: string;
@@ -42,48 +44,50 @@ export default async function ServicesPage() {
         </section>
       </section>
 
-      <section className="container max-w-[1130px] mx-auto py-[100px]">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {contents.map((service, i) => (
-            <Link
-              key={i}
-              href={`/service/${service.slug}`}
-              className="p-5 md:p-7 lg:p-[50px] pb-0 rounded-[30px] flex flex-col gap-8 bg-[#F4F5F8] hover:shadow-lg transition-all duration-300"
-            >
-              <div className="w-full h-[300px]">
-                <BlurImage
-                  src={imageFromCMS(service.thumbnail)}
-                  className="w-full h-full object-cover rounded-[20px]"
-                  alt="thumbnail"
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-col gap-2">
-                  <p className="font-semibold text-lg md:text-xl lg:text-2xl leading-tight">
-                    {service.title}
-                  </p>
-                  <p className="text-portto-purple font-medium">
-                    {service.category}
-                  </p>
+      <Suspense fallback={<div className="py-20"><Loading/></div>}>
+        <section className="container max-w-[1130px] mx-auto py-[100px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {contents.map((service, i) => (
+              <Link
+                key={i}
+                href={`/service/${service.slug}`}
+                className="p-5 md:p-7 lg:p-[50px] pb-0 rounded-[30px] flex flex-col gap-8 bg-[#F4F5F8] hover:shadow-lg transition-all duration-300"
+              >
+                <div className="w-full h-[300px]">
+                  <BlurImage
+                    src={imageFromCMS(service.thumbnail)}
+                    className="w-full h-full object-cover rounded-[20px]"
+                    alt="thumbnail"
+                  />
                 </div>
-                <div className="text-gray-600 line-clamp-3 prose prose-sm">
-                  <ReactMarkdown>{service.description}</ReactMarkdown>
+                <div className="flex flex-col gap-4">
+                  <div className="flex flex-col gap-2">
+                    <p className="font-semibold text-lg md:text-xl lg:text-2xl leading-tight">
+                      {service.title}
+                    </p>
+                    <p className="text-portto-purple font-medium">
+                      {service.category}
+                    </p>
+                  </div>
+                  <div className="text-gray-600 line-clamp-3 prose prose-sm">
+                    <ReactMarkdown>{service.description}</ReactMarkdown>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.map((tag, i) => (
+                      <span
+                        key={i}
+                        className="px-3 py-1 bg-white rounded-full text-sm font-medium"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <div className="flex flex-wrap gap-2">
-                  {service.tags.map((tag, i) => (
-                    <span
-                      key={i}
-                      className="px-3 py-1 bg-white rounded-full text-sm font-medium"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
+              </Link>
+            ))}
+          </div>
+        </section>
+      </Suspense>
     </>
   );
 } 
