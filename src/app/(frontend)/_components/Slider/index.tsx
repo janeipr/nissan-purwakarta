@@ -1,4 +1,3 @@
-import BlurImage from "@/app/components/BlurImage";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
