@@ -4,7 +4,7 @@ export default function DetailService({ content }: { content: Service }) {
   return (
     <section
       id="Details"
-      className="container max-w-[1130px] mx-auto pt-[50px]"
+      className="container max-w-[1130px] mx-auto mt-[150px]"
     >
       <div className="flex gap-[50px] justify-between">
         <div className="flex flex-col gap-5">

@@ -3,6 +3,17 @@ import HomeContents from "@/contents/home.json";
 import getContent from "@/service/contents";
 import Link from "next/link";
 
+interface Promo {
+  title: string;
+  slug: string;
+  publishDate: string;
+  thumbnail: string;
+  icon: {
+    src: string;
+    color: string;
+  };
+}
+
 export default async function Promos() {
   const { contents } = await getContent<Promo>(
     "promo",
@@ -21,7 +32,7 @@ export default async function Promos() {
               Promo dan Penawaran Khusus
             </h2>
             <Link
-              href="#promo"
+              href="/promos"
               className="font-bold text-center text-sm whitespace-nowrap lg:whitespace-normal lg:text-lg bg-portto-black rounded-full w-fit h-fit p-[14px_30px] text-white transition-all duration-300 hover:bg-white hover:text-portto-black hover:ring hover:ring-portto-black"
             >
               Semua Promo
@@ -29,11 +40,12 @@ export default async function Promos() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2 gap-[30px]">
             {contents.map((p, i) => (
-              <div
+              <Link
                 key={i}
+                href={`/promos/${p.slug}`}
                 className={`${
                   i === contents.length - 1 ? "lg:col-span-2" : ""
-                } p-5 md:p-7 lg:p-[50px] pb-0 rounded-[30px] flex flex-col gap-[50px] bg-[#F4F5F8]`}
+                } p-5 md:p-7 lg:p-[50px] pb-0 rounded-[30px] flex flex-col gap-[50px] bg-[#F4F5F8] hover:shadow-lg transition-all duration-300`}
               >
                 <div
                   style={{ backgroundColor: p.icon.color }}
@@ -63,7 +75,7 @@ export default async function Promos() {
                     alt="image"
                   />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

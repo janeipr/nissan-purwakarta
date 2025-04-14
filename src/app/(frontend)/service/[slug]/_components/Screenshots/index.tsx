@@ -7,7 +7,7 @@ export default function ScreenshotsService({ content }: { content: Service }) {
   return (
     <section
       id="Screenshots"
-      className="container max-w-[1130px] mx-auto pt-[50px]"
+      className="container max-w-[1130px] mx-auto py-[50px]"
     >
       <div className="flex flex-col gap-5">
         <h2 className="font-extrabold text-2xl">Screenshots</h2>

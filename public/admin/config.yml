@@ -168,6 +168,7 @@ collections:
           widget: "string",
           hint: "Huruf kecil dari Title dan ganti spasi menjadi dash (-)",
         }
+      - { label: "Description", name: "description", widget: "markdown" }
       - { label: "Publish Date", name: "publishDate", widget: "datetime" }
       - {
           label: "Thumbnail",

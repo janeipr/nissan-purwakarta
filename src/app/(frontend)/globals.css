@@ -6,6 +6,40 @@
   .pause-animate {
     animation-play-state: paused;
   }
+
+  .promo-content {
+    h2 {
+      @apply text-4xl;
+    }
+    h3 {
+      @apply text-3xl;
+    }
+    h4 {  
+      @apply text-2xl;
+    }
+    h5 {
+      @apply text-xl;
+    }
+    h6 {
+      @apply text-lg;
+    }
+    
+    p {
+      @apply my-5;
+    }
+
+    blockquote {
+      padding-left: 20px;
+      border-left: 3px solid rgb(239, 240, 244);
+    }
+    
+    ul{
+      padding-left: 20px;
+      li {
+        list-style: disc;
+      }
+    }
+  }
 }
 
 :root {

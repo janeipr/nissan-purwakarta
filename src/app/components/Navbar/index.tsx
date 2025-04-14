@@ -8,21 +8,9 @@ import { IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
 import { useBookingForm } from "@/app/context/BookingFormContext";
 
-const smoothScrollTo = (elementId: string) => {
-  const element = document.getElementById(elementId);
-  if (element) {
-    element.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  }
-};
 
 const NavLink = ({ onBookingClick }: { onBookingClick: () => void }) => {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
-    e.preventDefault();
-    smoothScrollTo(targetId);
-  };
+  
 
   return (
     <>
@@ -37,8 +25,7 @@ const NavLink = ({ onBookingClick }: { onBookingClick: () => void }) => {
         </li>
         <li>
           <Link
-            href="/#promos"
-            onClick={(e) => handleScroll(e, "promos")}
+            href="/promos"
             className="font-medium text-lg hover:text-portto-light-gold transition-all duration-300"
           >
             Promo
@@ -46,8 +33,7 @@ const NavLink = ({ onBookingClick }: { onBookingClick: () => void }) => {
         </li>
         <li>
           <Link
-            href="/#services"
-            onClick={(e) => handleScroll(e, "services")}
+            href="/services"
             className="font-medium text-lg hover:text-portto-light-gold transition-all duration-300"
           >
             Service
