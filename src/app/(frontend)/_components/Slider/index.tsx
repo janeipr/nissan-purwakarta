@@ -1,4 +1,5 @@
 import BlurImage from "@/app/components/BlurImage";
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 export default function Slider() {
@@ -13,16 +14,18 @@ export default function Slider() {
       src: "/images/logos/nissan/logo_Kia.png",
     },
     {
-      src: "/images/logos/nissan/logo_Nissan.jpg",
+      src: "/images/logos/nissan/logo_Nissan-new.png",
     },
   ];
 
   return (
-    <div className="company-logos mt-5 lg:mt-0 w-full overflow-hidden pb-[190px]">
+    <div className="company-logos mt-5 lg:mt-10 w-full overflow-hidden pb-[190px]">
       <Marquee>
         {images.map((image, i) => (
           <div key={i} className="mx-5 w-fit h-[40px] shrink-0">
-            <BlurImage
+            <Image
+            height={40}
+            width={40}
               src={image.src}
               className="w-full grayscale aspect-square h-full object-contain"
               alt="logo"
@@ -31,7 +34,9 @@ export default function Slider() {
         ))}
         {images.map((image, i) => (
           <div key={i} className="mx-5 w-fit h-[40px] shrink-0">
-            <BlurImage
+            <Image
+            height={40}
+            width={40}
               src={image.src}
               className="w-full grayscale aspect-square h-full object-contain"
               alt="logo"
@@ -40,7 +45,9 @@ export default function Slider() {
         ))}
         {images.map((image, i) => (
           <div key={i} className="mx-5 w-fit h-[40px] shrink-0">
-            <BlurImage
+            <Image
+            height={40}
+            width={40}
               src={image.src}
               className="w-full grayscale aspect-square h-full object-contain"
               alt="logo"
@@ -49,7 +56,9 @@ export default function Slider() {
         ))}
         {images.map((image, i) => (
           <div key={i} className="mx-5 w-fit h-[40px] shrink-0">
-            <BlurImage
+            <Image
+            height={40}
+            width={40}
               src={image.src}
               className="w-full grayscale aspect-square h-full object-contain"
               alt="logo"
@@ -58,7 +67,20 @@ export default function Slider() {
         ))}
         {images.map((image, i) => (
           <div key={i} className="mx-5 w-fit h-[40px] shrink-0">
-            <BlurImage
+            <Image
+            height={40}
+            width={40}
+              src={image.src}
+              className="w-full grayscale aspect-square h-full object-contain"
+              alt="logo"
+            />
+          </div>
+        ))}
+        {images.map((image, i) => (
+          <div key={i} className="mx-5 w-fit h-[40px] shrink-0">
+            <Image
+            height={40}
+            width={40}
               src={image.src}
               className="w-full grayscale aspect-square h-full object-contain"
               alt="logo"
