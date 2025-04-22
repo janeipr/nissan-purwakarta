@@ -1,0 +1,32 @@
+{
+  "slug": "ganti-oli-mesin-secara-berkala",
+  "thumbnail": "/images/upload/details-thumbnail.png",
+  "screenshots": [
+    {
+      "image": "/public/images/upload/details-thumbnail.png",
+      "title": "Screenshot 1"
+    },
+    {
+      "image": "/public/images/upload/thumbnail2.png",
+      "title": "Screenshot 2"
+    },
+    {
+      "title": "Screenshot 3",
+      "image": "/public/images/upload/thumbnail3.png"
+    },
+    {
+      "title": "Screenshot 4",
+      "image": "/public/images/upload/details-thumbnail.png"
+    }
+  ],
+  "subtitle": "Manfaat Penggantian Oli",
+  "title": "Ganti Oli Mesin Secara Berkala",
+  "tags": [
+    "ServisKendaraan",
+    "GantiOli",
+    "PerawatanMesin"
+  ],
+  "description": "Lakukan penggantian oli secara teratur untuk menjaga kinerja mesin tetap optimal, menghemat biaya perawatan, dan memperpanjang umur kendaraan Anda. Kami menyediakan layanan ganti oli berkualitas dengan produk terbaik dan teknisi berpengalaman.\n\n\n\n* **Performa Mesin Terjaga**\n\n  Mesin tetap bekerja maksimal dengan oli bersih.\n* **Hemat Biaya Perawatan**\n\n  Mencegah kerusakan besar akibat penumpukan kotoran.\n* **Mesin Lebih Awet**\n\n  Melindungi komponen dari gesekan berlebih.\n* **Proses Cepat & Mudah**\n\n  Kami menjamin pelayanan yang profesional dan efisien",
+  "publishDate": "2024-12-28T15:49:00.000Z",
+  "category": "Servis Ringan"
+}

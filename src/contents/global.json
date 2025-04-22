@@ -1,0 +1,51 @@
+{
+  "statistic": {
+    "service": "10,000+",
+    "customerSatisfaction": "98%",
+    "testDrive": "500+",
+    "original": "100%",
+    "experience": "5+ TH"
+  },
+  "testimonies": [
+    {
+      "logo": "/public/images/upload/logo-testi.svg",
+      "testimony": "“Her working method were truly different from other freelancers, she has this kind of mindset that can create user-center product and user loved it”",
+      "user": {
+        "name": "Jessi Lyio",
+        "role": "CPO Agolia Modd",
+        "picture": "/public/images/upload/photo.png"
+      },
+      "star": 5
+    },
+    {
+      "logo": "/public/images/upload/logo-testi2.svg",
+      "testimony": "“Her working method were truly different from other freelancers, she has this kind of mindset that can create user-center product and user loved it”",
+      "user": {
+        "name": "Jessi Lyio",
+        "role": "CPO Agolia Modd",
+        "picture": "/public/images/upload/photo2.png"
+      },
+      "star": 5
+    },
+    {
+      "logo": "/public/images/upload/logo-testi3.svg",
+      "testimony": "“Her working method were truly different from other freelancers, she has this kind of mindset that can create user-center product and user loved it”",
+      "user": {
+        "name": "Jessi Lyio",
+        "role": "CPO Agolia Modd",
+        "picture": "/public/images/upload/photo3.png"
+      },
+      "star": 5
+    },
+    {
+      "logo": "/public/images/upload/logo-testi4.svg",
+      "testimony": "“Her working method were truly different from other freelancers, she has this kind of mindset that can create user-center product and user loved it”",
+      "user": {
+        "name": "Jessi Lyio",
+        "role": "CPO Agolia Modd",
+        "picture": "/public/images/upload/photo4.png"
+      },
+      "star": 5
+    }
+  ]
+}

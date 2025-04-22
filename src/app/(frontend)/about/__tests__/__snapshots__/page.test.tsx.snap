@@ -1,0 +1,637 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutPage renders correctly 1`] = `
+<div>
+  <div
+    class="min-h-screen bg-portto-black text-white"
+  >
+    <nav
+      class="container max-w-[1130px] mb-[50px] lg:mb-[100px] mx-auto flex justify-between items-center pt-[30px] z-10"
+    >
+      <a
+        class="w-[161px] flex shrink-0 h-fit"
+        href="/"
+      >
+        <img
+          alt="logo"
+          class="lg:w-[80px] lg:h-[80px] w-[60px] h-[60px]"
+        />
+      </a>
+      <div
+        class="gap-[50px] hidden lg:flex items-center"
+      >
+        <ul
+          class="flex flex-col lg:flex-row gap-10 lg:gap-[50px] lg:items-center text-portto-black lg:text-white"
+        >
+          <li>
+            <a
+              class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300"
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300"
+              href="/#promos"
+            >
+              Promo
+            </a>
+          </li>
+          <li>
+            <a
+              class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300"
+              href="/#services"
+            >
+              Service
+            </a>
+          </li>
+          <li>
+            <a
+              class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300"
+              href="/about"
+            >
+              About
+            </a>
+          </li>
+        </ul>
+        <button
+          class="bg-portto-light-gold text-black mt-10 lg:mt-0 w-full lg:w-fit font-bold text-lg p-[14px_30px] rounded-full transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]"
+        >
+          Book A Service
+        </button>
+      </div>
+      <div
+        class="cursor-pointer block lg:hidden"
+      >
+        <svg
+          color="white"
+          fill="none"
+          height="36"
+          stroke="currentColor"
+          stroke-width="0"
+          style="color: white;"
+          viewBox="0 0 15 15"
+          width="36"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M1.5 3C1.22386 3 1 3.22386 1 3.5C1 3.77614 1.22386 4 1.5 4H13.5C13.7761 4 14 3.77614 14 3.5C14 3.22386 13.7761 3 13.5 3H1.5ZM1 7.5C1 7.22386 1.22386 7 1.5 7H13.5C13.7761 7 14 7.22386 14 7.5C14 7.77614 13.7761 8 13.5 8H1.5C1.22386 8 1 7.77614 1 7.5ZM1 11.5C1 11.2239 1.22386 11 1.5 11H13.5C13.7761 11 14 11.2239 14 11.5C14 11.7761 13.7761 12 13.5 12H1.5C1.22386 12 1 11.7761 1 11.5Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </div>
+      <div
+        class=" bg-white transition-all duration-200 ease-in-out h-screen w-full p-5 top-0 fixed left-0 z-50 translate-x-[100%]"
+      >
+        <div
+          class="relative"
+        >
+          <div
+            class="absolute right-2 top-0 cursor-pointer"
+          >
+            <svg
+              fill="currentColor"
+              height="36"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="36"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M368 368 144 144m224 0L144 368"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="32"
+              />
+            </svg>
+          </div>
+          <ul
+            class="flex flex-col lg:flex-row gap-10 lg:gap-[50px] lg:items-center text-portto-black lg:text-white"
+          >
+            <li>
+              <a
+                class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300"
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300"
+                href="/#promos"
+              >
+                Promo
+              </a>
+            </li>
+            <li>
+              <a
+                class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300"
+                href="/#services"
+              >
+                Service
+              </a>
+            </li>
+            <li>
+              <a
+                class="font-medium text-lg hover:text-portto-light-gold transition-all duration-300"
+                href="/about"
+              >
+                About
+              </a>
+            </li>
+          </ul>
+          <button
+            class="bg-portto-light-gold text-black mt-10 lg:mt-0 w-full lg:w-fit font-bold text-lg p-[14px_30px] rounded-full transition-all duration-300 hover:shadow-[0_10px_20px_0_#FFE7C280]"
+          >
+            Book A Service
+          </button>
+        </div>
+      </div>
+    </nav>
+    <section
+      class="relative pt-[100px] pb-[50px]"
+    >
+      <div
+        class="container max-w-[1130px] mx-auto"
+      >
+        <div
+          class="flex flex-col items-center text-center gap-6"
+        >
+          <h1
+            class="font-extrabold text-4xl xl:text-5xl"
+          >
+            Tentang Nissan Purwakarta
+          </h1>
+          <p
+            class="text-lg text-gray-300 max-w-2xl"
+          >
+            Kami adalah dealer resmi Nissan yang berkomitmen untuk memberikan layanan terbaik dan pengalaman berkendara yang luar biasa bagi pelanggan kami.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-[100px] bg-white text-portto-black"
+    >
+      <div
+        class="container max-w-[1130px] mx-auto"
+      >
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-12"
+        >
+          <div
+            class="space-y-6"
+          >
+            <h2
+              class="font-bold text-3xl"
+            >
+              Visi Kami
+            </h2>
+            <p
+              class="text-lg text-gray-600"
+            >
+              Menjadi dealer Nissan terdepan di Purwakarta yang memberikan pengalaman berkendara terbaik dan layanan berkualitas tinggi bagi setiap pelanggan.
+            </p>
+          </div>
+          <div
+            class="space-y-6"
+          >
+            <h2
+              class="font-bold text-3xl"
+            >
+              Misi Kami
+            </h2>
+            <ul
+              class="space-y-4 text-lg text-gray-600"
+            >
+              <li
+                class="flex items-start gap-3"
+              >
+                <span
+                  class="text-portto-light-gold mt-1"
+                >
+                  •
+                </span>
+                Menyediakan kendaraan Nissan berkualitas dengan harga kompetitif
+              </li>
+              <li
+                class="flex items-start gap-3"
+              >
+                <span
+                  class="text-portto-light-gold mt-1"
+                >
+                  •
+                </span>
+                Memberikan layanan purna jual yang terbaik dan profesional
+              </li>
+              <li
+                class="flex items-start gap-3"
+              >
+                <span
+                  class="text-portto-light-gold mt-1"
+                >
+                  •
+                </span>
+                Membangun hubungan jangka panjang dengan pelanggan
+              </li>
+              <li
+                class="flex items-start gap-3"
+              >
+                <span
+                  class="text-portto-light-gold mt-1"
+                >
+                  •
+                </span>
+                Mengembangkan tim yang berdedikasi dan terampil
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-[100px]"
+    >
+      <div
+        class="container max-w-[1130px] mx-auto"
+      >
+        <h2
+          class="text-center font-bold text-3xl mb-16"
+        >
+          Nilai-Nilai Kami
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+        >
+          <div
+            class="bg-white/10 p-8 rounded-[30px] text-center"
+          >
+            <div
+              class="w-16 h-16 bg-portto-light-gold rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <div
+                data-testid="fa-car"
+              />
+            </div>
+            <h3
+              class="font-bold text-xl mb-4"
+            >
+              Kualitas
+            </h3>
+            <p
+              class="text-gray-300"
+            >
+              Kami hanya menyediakan kendaraan Nissan berkualitas tinggi dengan standar terbaik.
+            </p>
+          </div>
+          <div
+            class="bg-white/10 p-8 rounded-[30px] text-center"
+          >
+            <div
+              class="w-16 h-16 bg-portto-light-gold rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <div
+                data-testid="fa-users"
+              />
+            </div>
+            <h3
+              class="font-bold text-xl mb-4"
+            >
+              Pelayanan
+            </h3>
+            <p
+              class="text-gray-300"
+            >
+              Tim kami siap memberikan pelayanan terbaik dan solusi tepat untuk kebutuhan Anda.
+            </p>
+          </div>
+          <div
+            class="bg-white/10 p-8 rounded-[30px] text-center"
+          >
+            <div
+              class="w-16 h-16 bg-portto-light-gold rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <div
+                data-testid="fa-tools"
+              />
+            </div>
+            <h3
+              class="font-bold text-xl mb-4"
+            >
+              Profesionalisme
+            </h3>
+            <p
+              class="text-gray-300"
+            >
+              Setiap tim kami bekerja dengan profesional dan penuh dedikasi.
+            </p>
+          </div>
+          <div
+            class="bg-white/10 p-8 rounded-[30px] text-center"
+          >
+            <div
+              class="w-16 h-16 bg-portto-light-gold rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <div
+                data-testid="fa-handshake"
+              />
+            </div>
+            <h3
+              class="font-bold text-xl mb-4"
+            >
+              Integritas
+            </h3>
+            <p
+              class="text-gray-300"
+            >
+              Kami menjunjung tinggi kejujuran dan transparansi dalam setiap transaksi.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-[100px] bg-white text-portto-black"
+    >
+      <div
+        class="container max-w-[1130px] mx-auto"
+      >
+        <h2
+          class="text-center font-bold text-3xl mb-16"
+        >
+          Tim Kami
+        </h2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <div
+            class="bg-gray-50 p-6 rounded-[30px] text-center"
+          >
+            <div
+              class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6"
+            />
+            <h3
+              class="font-bold text-xl mb-2"
+            >
+              Nama Karyawan
+            </h3>
+            <p
+              class="text-gray-600 mb-4"
+            >
+              Jabatan
+            </p>
+            <p
+              class="text-gray-500"
+            >
+              Deskripsi singkat tentang peran dan tanggung jawab dalam tim.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 p-6 rounded-[30px] text-center"
+          >
+            <div
+              class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6"
+            />
+            <h3
+              class="font-bold text-xl mb-2"
+            >
+              Nama Karyawan
+            </h3>
+            <p
+              class="text-gray-600 mb-4"
+            >
+              Jabatan
+            </p>
+            <p
+              class="text-gray-500"
+            >
+              Deskripsi singkat tentang peran dan tanggung jawab dalam tim.
+            </p>
+          </div>
+          <div
+            class="bg-gray-50 p-6 rounded-[30px] text-center"
+          >
+            <div
+              class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6"
+            />
+            <h3
+              class="font-bold text-xl mb-2"
+            >
+              Nama Karyawan
+            </h3>
+            <p
+              class="text-gray-600 mb-4"
+            >
+              Jabatan
+            </p>
+            <p
+              class="text-gray-500"
+            >
+              Deskripsi singkat tentang peran dan tanggung jawab dalam tim.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-[100px]"
+    >
+      <div
+        class="container max-w-[1130px] mx-auto"
+      >
+        <div
+          class="bg-white/10 p-12 rounded-[30px]"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-12"
+          >
+            <div>
+              <h2
+                class="font-bold text-3xl mb-6"
+              >
+                Hubungi Kami
+              </h2>
+              <p
+                class="text-gray-300 mb-8"
+              >
+                Kami siap membantu Anda dengan segala kebutuhan kendaraan Nissan Anda.
+              </p>
+              <div
+                class="space-y-4"
+              >
+                <div
+                  class="flex items-center gap-4"
+                >
+                  <div
+                    class="w-12 h-12 bg-portto-light-gold rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-portto-black"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                      <path
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p
+                      class="font-medium"
+                    >
+                      Alamat
+                    </p>
+                    <p
+                      class="text-gray-300"
+                    >
+                      Jl. Contoh No. 123, Purwakarta
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-4"
+                >
+                  <div
+                    class="w-12 h-12 bg-portto-light-gold rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-portto-black"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p
+                      class="font-medium"
+                    >
+                      Telepon
+                    </p>
+                    <p
+                      class="text-gray-300"
+                    >
+                      (0264) 123-4567
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center gap-4"
+                >
+                  <div
+                    class="w-12 h-12 bg-portto-light-gold rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-portto-black"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                      />
+                    </svg>
+                  </div>
+                  <div>
+                    <p
+                      class="font-medium"
+                    >
+                      Email
+                    </p>
+                    <p
+                      class="text-gray-300"
+                    >
+                      info@nissanpurwakarta.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-[30px] p-8"
+            >
+              <h3
+                class="font-bold text-xl mb-6 text-portto-black"
+              >
+                Jam Operasional
+              </h3>
+              <div
+                class="space-y-4"
+              >
+                <div
+                  class="flex justify-between items-center"
+                >
+                  <p
+                    class="text-gray-600"
+                  >
+                    Senin - Jumat
+                  </p>
+                  <p
+                    class="font-medium"
+                  >
+                    08:00 - 17:00
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between items-center"
+                >
+                  <p
+                    class="text-gray-600"
+                  >
+                    Sabtu
+                  </p>
+                  <p
+                    class="font-medium"
+                  >
+                    08:00 - 15:00
+                  </p>
+                </div>
+                <div
+                  class="flex justify-between items-center"
+                >
+                  <p
+                    class="text-gray-600"
+                  >
+                    Minggu
+                  </p>
+                  <p
+                    class="font-medium"
+                  >
+                    Tutup
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;

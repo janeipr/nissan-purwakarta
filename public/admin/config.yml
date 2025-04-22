@@ -1,0 +1,230 @@
+backend:
+  name: git-gateway
+  branch: main
+local_backend:
+  # when using a custom proxy server port
+  url: http://localhost:8081/api/v1
+  # when accessing the local site from a host other than 'localhost' or '127.0.0.1'
+  allowed_hosts: ["127.0.0.1"]
+media_folder: /public/images/upload
+public_folder: /public
+publish_mode: editorial_workflow
+site_url: https://nissan-purwakarta.netlify.app
+logo_url: /public/images/logos/nissan/logo_Indomobil_Group.svg
+
+i18n:
+  structure: multiple_folders
+  locales: [en, id]
+
+collections:
+  - label: Global
+    name: global
+    editor:
+      preview: false
+    files:
+      - label: "Global Contents"
+        name: "global"
+        file: "src/contents/global.json"
+        fields:
+          - label: Statistic
+            name: statistic
+            widget: object
+            required: true
+            fields:
+              - label: Service
+                name: service
+                widget: string
+                required: true
+                hint: "Jumlah servis yang akan ditampilkan di bagian statistik"
+              - label: "Customer Satisfaction"
+                name: customerSatisfaction
+                widget: string
+                required: true
+                hint: "Jumlah kepuasan pelanggan yang akan ditampilkan di bagian statistik"
+              - label: "Test Drive"
+                name: testDrive
+                widget: string
+                required: true
+                hint: "Jumlah test drive yang akan ditampilkan di bagian statistik"
+              - label: "Original"
+                name: original
+                widget: string
+                required: true
+                hint: "Jumlah original yang akan ditampilkan di bagian statistik"
+              - label: Experience
+                name: experience
+                widget: string
+                required: true
+                hint: "Jumlah experience/pengalaman yang akan ditampilkan di bagian statistik"
+
+          - label: Testimonies
+            name: testimonies
+            widget: list
+            fields:
+              - label: Logo
+                name: logo
+                widget: image
+                required: true
+                media_folder: "/public/images/upload"
+              - label: "Testimony"
+                name: testimony
+                widget: markdown
+                required: true
+              - label: "User"
+                name: user
+                widget: object
+                required: true
+                fields:
+                  - label: Name
+                    name: name
+                    widget: string
+                    required: true
+                  - label: Role
+                    name: role
+                    widget: string
+                    required: true
+                  - label: Picture
+                    name: picture
+                    widget: image
+                    media_folder: "/public/images/upload"
+                    required: true
+              - label: "Star"
+                name: star
+                widget: number
+                required: true
+                min: 0
+                max: 5
+
+  - label: "Pages"
+    name: "pages"
+    editor:
+      preview: false
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "src/contents/home.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            required: true
+            fields:
+              - {
+                  label: "Title",
+                  name: "title",
+                  widget: "text",
+                  required: true,
+                }
+              - {
+                  label: "Subtitle",
+                  name: "subtitle",
+                  widget: "string",
+                  hint: "Akan ditempatkan dibawah title dengan format bold",
+                  required: true,
+                }
+              - {
+                  label: "Description",
+                  name: "description",
+                  widget: "text",
+                  required: true,
+                }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                required: true
+                fields:
+                  - label: Label
+                    name: label
+                    widget: string
+                    required: true
+                  - label: Link
+                    name: link
+                    widget: string
+                    hint: "Masukkan path URL saja. Contoh: /contact-us"
+                    required: true
+          - label: Promo
+            name: promo
+            multiple: true
+            widget: relation
+            collection: promo
+            max: 3
+            search_fields: ["title"]
+            value_field: "{{fields.slug}}"
+            display_fields: ["title"]
+
+  - label: "Promo"
+    name: "promo"
+    folder: "src/contents/promo"
+    extension: json
+    slug: "{{fields.slug}}"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+          hint: "Huruf kecil dari Title dan ganti spasi menjadi dash (-)",
+        }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Publish Date", name: "publishDate", widget: "datetime" }
+      - {
+          label: "Thumbnail",
+          name: "thumbnail",
+          widget: "image",
+          media_folder: "/public/images/upload",
+        }
+      - label: "Icon"
+        name: "icon"
+        widget: "object"
+        fields:
+          - { label: "Image", name: "src", widget: "image" }
+          - {
+              label: "Background Color",
+              name: "color",
+              widget: "color",
+              media_folder: "/public/images/upload",
+            }
+
+  - label: "Service"
+    name: "service"
+    folder: "src/contents/service"
+    extension: json
+    slug: "{{fields.slug}}"
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+          hint: "Huruf kecil dari Title dan ganti spasi menjadi dash (-)",
+        }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Subtitle", name: "subtitle", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Publish Date", name: "publishDate", widget: "datetime" }
+      - {
+          label: "Thumbnail",
+          name: "thumbnail",
+          widget: "image",
+          media_folder: "/public/images/upload",
+        }
+      - label: "Screenshots"
+        name: "screenshots"
+        widget: "list"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Image",
+              name: "image",
+              widget: "image",
+              media_folder: "/public/images/upload",
+            }
+      - label: "Tags"
+        name: "tags"
+        widget: "list"

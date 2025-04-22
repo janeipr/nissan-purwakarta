@@ -1,0 +1,17 @@
+{
+  "title": "Test",
+  "hero": {
+    "title": "Layanan After-Sales Terbaik untuk Mobil Nissan Anda!",
+    "subtitle": "Perawatan & Kepuasan Maksimal untuk Mobil Anda",
+    "description": "Nikmati berbagai layanan purna jual terpercaya dari Indomobil Nissan Purwakarta. Mulai dari servis berkala, booking test drive, hingga penyediaan suku cadang asli untuk menjaga performa kendaraan Anda.",
+    "button": {
+      "label": "Contact Us",
+      "link": "#"
+    }
+  },
+  "promo": [
+    "promo-akhir-tahun-paket-service-hemat-mulai-dari-499",
+    "diskon-20-untuk-penggantian-oli-mesin-asli-nissan",
+    "gratis-pemeriksaan-25-titik-untuk-servis-berkala"
+  ]
+}
